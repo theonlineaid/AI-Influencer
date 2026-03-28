@@ -18,32 +18,108 @@ export const site = {
 };
 
 export const nav = {
-  login: { label: "Log in", href: "/login" },
-  cta: { label: "Get Started", href: "/signup" },
+  cta: { label: "Book a Free Strategy Call", href: "#book-call" },
 };
 
 export const hero = {
-  headline:
-    "Get Your AI Tool 30 Million Views and 2,500 Signups in 30 Days.",
-  subheadline: "Using our AI influencer flywheel — built for founders who want traction, not theory.",
-  primaryCta: { label: "Get Started", href: "/signup" },
-  secondaryCta: { label: "Book a Demo", href: "#book-call" },
+  /** Main headline — shown on separate lines in the hero. */
+  headlineLines: [
+    "Get Your AI Tool 30 Million",
+    "Views and 2,500 Signups",
+    "in 30 Days",
+  ],
+  subheadline: "Using our AI Influencer Flywheel.",
+  punchy:
+    "No random posts. No wasted budget. No guessing what works.",
+  guarantee:
+    "And if we don't deliver 30M views and 1,500 signups? — You don't pay.",
+  /** Contained (solid) — under video */
+  campaignCta: {
+    label: "Start Your 30-Day Campaign",
+    href: "#book-call",
+  },
+  /** Outline — under video */
+  strategyCallCta: {
+    label: "Book a Free Strategy Call",
+    href: "#book-call",
+  },
+  guaranteeFootnote:
+    "30-day guarantee • No signups = No payment + $5,000 bonus",
   email: {
     placeholder: "Enter your work email",
     submitLabel: "Start Growing Now",
   },
-  videoPoster: {
-    src: "/images/hero-dashboard.svg",
-    alt: "Before and after growth preview",
-    width: 800,
-    height: 560,
-  } satisfies ImageRef,
+  /** Hero YouTube embed (edit `src` to swap videos). */
+  youtubeEmbed: {
+    src: "https://www.youtube.com/embed/jX4dLxiso6A?si=XWgBQSQvYHneR_un",
+    title: "YouTube video player",
+  },
 };
 
+/** Logo strip under hero — swap `src` for your own brand assets in /public/images/trusted/ */
 export const trustedBy = {
   title: "Trusted by founders at",
-  logos: ["Instagram", "TikTok", "OpenAI", "Anthropic", "Notion", "Stripe"],
-};
+  logos: [
+    {
+      id: "higgsfield",
+      src: "/images/trusted/higgsfield.svg",
+      alt: "Higgsfield AI",
+      width: 200,
+      height: 36,
+    },
+    {
+      id: "napkin",
+      src: "/images/trusted/napkin.svg",
+      alt: "Napkin AI",
+      width: 140,
+      height: 36,
+    },
+    {
+      id: "chatgpt",
+      src: "/images/trusted/chatgpt.svg",
+      alt: "ChatGPT",
+      width: 130,
+      height: 36,
+    },
+    {
+      id: "deepseek",
+      src: "/images/trusted/deepseek.svg",
+      alt: "DeepSeek",
+      width: 140,
+      height: 36,
+    },
+    {
+      id: "perplexity",
+      src: "/images/trusted/perplexity.svg",
+      alt: "Perplexity",
+      width: 160,
+      height: 36,
+    },
+    {
+      id: "claude",
+      src: "/images/trusted/claude.svg",
+      alt: "Claude",
+      width: 110,
+      height: 36,
+    },
+    {
+      id: "runway",
+      src: "/images/trusted/runway.svg",
+      alt: "Runway",
+      width: 120,
+      height: 36,
+    },
+    {
+      id: "midjourney",
+      src: "/images/trusted/midjourney.svg",
+      alt: "Midjourney",
+      width: 160,
+      height: 36,
+    },
+  ],
+} as const;
+
+export type TrustedLogo = (typeof trustedBy.logos)[number];
 
 export const painPoints = {
   title: "Are You Struggling With These?",
@@ -159,6 +235,12 @@ export const caseStudies = {
       title: "B2B AI assistant launch",
       body: "30-day burst focused on founder pain stories + demo clips.",
       metrics: { views: "12.4M", signups: "1.8k", roi: "4.1x" },
+      image: {
+        src: "/images/cases/tiktok-analytics.svg",
+        alt: "TikTok analytics dashboard showing views and growth",
+        width: 800,
+        height: 520,
+      } satisfies ImageRef,
     },
     {
       id: "x",
@@ -166,6 +248,12 @@ export const caseStudies = {
       title: "Developer tool waitlist",
       body: "Thread-led narrative + micro-demos every 48 hours.",
       metrics: { views: "8.2M", signups: "920", roi: "3.6x" },
+      image: {
+        src: "/images/cases/x-analytics.svg",
+        alt: "X analytics showing impressions and engagement",
+        width: 800,
+        height: 520,
+      } satisfies ImageRef,
     },
     {
       id: "ig",
@@ -173,6 +261,12 @@ export const caseStudies = {
       title: "Consumer AI companion",
       body: "Relatable skits + product proof in the first 3 seconds.",
       metrics: { views: "6.9M", signups: "2.1k", roi: "5.0x" },
+      image: {
+        src: "/images/cases/instagram-analytics.svg",
+        alt: "Instagram Reels performance and reach dashboard",
+        width: 800,
+        height: 520,
+      } satisfies ImageRef,
     },
   ],
 };
@@ -251,8 +345,9 @@ export const booking = {
   title: "Book Your Strategy Call",
   subtitle:
     "Pick a time that works. We’ll map your flywheel and next 30 days of distribution.",
-  /** Paste your Calendly embed URL when ready, e.g. https://calendly.com/your-handle/discovery */
-  calendlyEmbedUrl: "" as string,
+  /** Inline embed — event: https://calendly.com/omorfaruk-dev/new-meeting */
+  calendlyEmbedUrl:
+    "https://calendly.com/omorfaruk-dev/new-meeting?embed_type=Inline",
 };
 
 export const footer = {

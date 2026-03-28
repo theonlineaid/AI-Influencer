@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" fill="none" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="tkbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f12"/>
+      <stop offset="100%" stop-color="#1a1a22"/>
+    </linearGradient>
+    <linearGradient id="tkaccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff0050" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00f2ea" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" fill="url(#tkbg)"/>
+  <rect x="32" y="28" width="736" height="44" rx="10" fill="#252530"/>
+  <circle cx="56" cy="50" r="8" fill="#ff0050"/>
+  <rect x="80" y="42" width="120" height="16" rx="4" fill="#3f3f4f"/>
+  <rect x="32" y="92" width="340" height="396" rx="16" fill="#14141c" stroke="#2a2a36"/>
+  <rect x="388" y="92" width="380" height="200" rx="16" fill="#14141c" stroke="#2a2a36"/>
+  <text x="56" y="132" fill="#9ca3af" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Overview</text>
+  <text x="56" y="168" fill="#fff" font-family="system-ui,sans-serif" font-size="28" font-weight="700">12.4M</text>
+  <text x="56" y="192" fill="#6b7280" font-family="system-ui,sans-serif" font-size="12">Total views (30d)</text>
+  <rect x="56" y="212" width="280" height="8" rx="4" fill="#2a2a36"/>
+  <rect x="56" y="212" width="220" height="8" rx="4" fill="url(#tkaccent)"/>
+  <rect x="56" y="248" width="280" height="120" rx="10" fill="#1c1c26"/>
+  <path d="M72 340 L120 280 L168 300 L220 250 L280 270 L320 240" stroke="#00f2ea" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="388" y="116" width="160" height="12" rx="3" fill="#3f3f4f"/>
+  <rect x="388" y="312" width="380" height="176" rx="16" fill="#14141c" stroke="#2a2a36"/>
+  <rect x="412" y="340" width="100" height="72" rx="8" fill="#252530"/>
+  <rect x="528" y="340" width="100" height="72" rx="8" fill="#252530"/>
+  <rect x="644" y="340" width="100" height="72" rx="8" fill="#252530"/>
+  <text x="412" y="448" fill="#9ca3af" font-family="system-ui,sans-serif" font-size="11">Top clips - demo + founder POV</text>
+</svg>

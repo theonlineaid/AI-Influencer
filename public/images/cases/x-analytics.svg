@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" fill="none" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="xbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" fill="url(#xbg)"/>
+  <rect x="32" y="32" width="736" height="48" rx="12" fill="#181818" stroke="#2f2f2f"/>
+  <text x="56" y="64" fill="#ffffff" font-family="system-ui,sans-serif" font-size="16" font-weight="700">Analytics</text>
+  <rect x="600" y="44" width="140" height="28" rx="14" fill="#ffffff"/>
+  <text x="632" y="63" fill="#000000" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Export</text>
+  <rect x="32" y="104" width="360" height="384" rx="16" fill="#0f0f0f" stroke="#2f2f2f"/>
+  <text x="56" y="144" fill="#71767b" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Impressions</text>
+  <text x="56" y="188" fill="#ffffff" font-family="system-ui,sans-serif" font-size="32" font-weight="700">8.2M</text>
+  <text x="56" y="214" fill="#1d9bf0" font-family="system-ui,sans-serif" font-size="13">+34% vs prior period</text>
+  <rect x="56" y="240" width="312" height="140" rx="12" fill="#161616"/>
+  <rect x="72" y="340" width="24" height="40" rx="4" fill="#1d9bf0" opacity="0.35"/>
+  <rect x="108" y="300" width="24" height="80" rx="4" fill="#1d9bf0" opacity="0.55"/>
+  <rect x="144" y="260" width="24" height="120" rx="4" fill="#1d9bf0" opacity="0.75"/>
+  <rect x="180" y="280" width="24" height="100" rx="4" fill="#1d9bf0"/>
+  <rect x="216" y="310" width="24" height="70" rx="4" fill="#1d9bf0" opacity="0.6"/>
+  <rect x="252" y="270" width="24" height="110" rx="4" fill="#1d9bf0" opacity="0.85"/>
+  <rect x="412" y="104" width="356" height="180" rx="16" fill="#0f0f0f" stroke="#2f2f2f"/>
+  <text x="436" y="144" fill="#71767b" font-family="system-ui,sans-serif" font-size="12">Engagement rate</text>
+  <text x="436" y="180" fill="#ffffff" font-family="system-ui,sans-serif" font-size="26" font-weight="700">6.8%</text>
+  <rect x="412" y="308" width="356" height="180" rx="16" fill="#0f0f0f" stroke="#2f2f2f"/>
+  <text x="436" y="348" fill="#71767b" font-family="system-ui,sans-serif" font-size="12">Link clicks to waitlist</text>
+  <text x="436" y="384" fill="#ffffff" font-family="system-ui,sans-serif" font-size="26" font-weight="700">920</text>
+</svg>

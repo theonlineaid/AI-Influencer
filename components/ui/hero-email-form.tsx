@@ -8,10 +8,10 @@ export function HeroEmailForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // Wire to API / newsletter provider when ready
-    if (email.trim()) {
-      window.location.href = `/signup?email=${encodeURIComponent(email.trim())}`;
-    }
+    document
+      .getElementById("book-call")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setEmail("");
   }
 
   return (

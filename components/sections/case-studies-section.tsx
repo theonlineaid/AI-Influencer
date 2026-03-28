@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { caseStudies } from "@/lib/content";
 import { ButtonLink } from "@/components/ui/button-link";
 import { FadeIn } from "@/components/ui/fade-in";
@@ -27,7 +28,18 @@ export function CaseStudiesSection() {
                     {c.title}
                   </h3>
                 </div>
-                <div className="aspect-[4/3] bg-gradient-to-br from-zinc-100 to-zinc-200" />
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100">
+                  <Image
+                    src={c.image.src}
+                    alt={c.image.alt}
+                    width={c.image.width}
+                    height={c.image.height}
+                    className="h-full w-full object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 360px"
+                    loading="lazy"
+                    unoptimized={c.image.src.endsWith(".svg")}
+                  />
+                </div>
                 <div className="flex flex-1 flex-col p-5">
                   <p className="text-sm text-zinc-600">{c.body}</p>
                   <dl className="mt-6 grid grid-cols-3 gap-2 border-t border-zinc-100 pt-4 text-center">

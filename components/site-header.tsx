@@ -12,21 +12,13 @@ export function SiteHeader() {
         >
           {site.name}
         </Link>
-        <div className="flex items-center gap-4 sm:gap-6">
-          <Link
-            href={nav.login.href}
-            className="text-sm font-medium text-white/90 transition-colors hover:text-white"
-          >
-            {nav.login.label}
-          </Link>
-          <ButtonLink
-            href={nav.cta.href}
-            variant="whiteSolid"
-            className="px-4 py-2 text-sm"
-          >
-            {nav.cta.label}
-          </ButtonLink>
-        </div>
+        <ButtonLink
+          href={nav.cta.href}
+          variant="whiteOutline"
+          className="bg-transparent px-4 py-2 text-sm whitespace-nowrap sm:px-5"
+        >
+          {nav.cta.label}
+        </ButtonLink>
       </div>
     </header>
   );
