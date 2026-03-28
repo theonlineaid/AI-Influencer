@@ -15,6 +15,13 @@ export const site = {
   description:
     "Get your AI product in front of millions — using the Sajied AI growth flywheel.",
   url: "https://sajied.ai",
+  /** Header / footer — founder portrait used as brand mark */
+  logo: {
+    src: "/images/sajied-founder.png",
+    alt: "Sajied AI",
+    width: 640,
+    height: 800,
+  } satisfies ImageRef,
 };
 
 export const nav = {
