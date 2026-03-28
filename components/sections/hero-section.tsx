@@ -62,7 +62,7 @@ export function HeroSection() {
           <p className="mx-auto mt-4 max-w-xl text-pretty text-sm font-medium leading-relaxed text-blue-100/95 md:text-base">
             {hero.guaranteeFootnote}
           </p>
-          <HeroEmailForm />
+          {/* <HeroEmailForm /> */}
         </FadeIn>
 
         <FadeIn delay={0.14} className="mt-14 border-t border-white/15 pt-10">
