@@ -2,6 +2,8 @@ import { SiteHeader } from "@/components/site-header";
 import { AboutSection } from "@/components/sections/about-section";
 import { BookingSection } from "@/components/sections/booking-section";
 import { CaseStudiesSection } from "@/components/sections/case-studies-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { TeamSection } from "@/components/sections/team-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FlywheelSection } from "@/components/sections/flywheel-section";
 import { GrowthSystemSection } from "@/components/sections/growth-system-section";
@@ -21,6 +23,8 @@ export default function Home() {
         <GrowthSystemSection />
         <IncludedSection />
         <CaseStudiesSection />
+        <TestimonialsSection />
+        <TeamSection />
         <AboutSection />
         <FaqSection />
         <BookingSection />

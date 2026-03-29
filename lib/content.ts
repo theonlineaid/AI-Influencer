@@ -24,8 +24,11 @@ export const site = {
   } satisfies ImageRef,
 };
 
+/** Calendly scheduling page — header CTA opens here; inline widget uses the same event. */
+export const calendlyEventUrl = "https://calendly.com/omorfaruk-dev/new-meeting";
+
 export const nav = {
-  cta: { label: "Book a Free Strategy Call", href: "#book-call" },
+  cta: { label: "Book a Free Strategy Call", href: calendlyEventUrl },
 };
 
 export const hero = {
@@ -278,6 +281,72 @@ export const caseStudies = {
   ],
 };
 
+export const testimonials = {
+  id: "testimonials" as const,
+  title: "What founders say",
+  subtitle:
+    "Teams bring us in when distribution has to compound — not spike once and disappear.",
+  items: [
+    {
+      id: "t1",
+      quote:
+        "We finally had a publishing rhythm that didn’t eat our whole week. Views turned into qualified demos faster than our paid tests ever did.",
+      author: "Jordan M.",
+      role: "Co-founder",
+      company: "B2B AI workflow tool",
+    },
+    {
+      id: "t2",
+      quote:
+        "The scripts sounded like us — not generic ‘AI hype.’ Our waitlist narrative finally matched what we were actually shipping.",
+      author: "Priya S.",
+      role: "Head of Product",
+      company: "Consumer AI app",
+    },
+    {
+      id: "t3",
+      quote:
+        "Clear reporting from attention to signups. We could show our investors a story that wasn’t hand-wavy.",
+      author: "Alex R.",
+      role: "CEO",
+      company: "Developer tools startup",
+    },
+  ],
+};
+
+export const ourTeam = {
+  id: "team" as const,
+  title: "Meet the team",
+  subtitle:
+    "Strategy, creative, and ops in one squad — velocity without building a full in-house studio.",
+  members: [
+    {
+      id: "ceo",
+      name: "Zayven Knox",
+      role: "CEO & Founder",
+      bio: "Sets direction, owns partner outcomes, and keeps the flywheel focused on signups — not vanity metrics.",
+      image: {
+        src: "https://pbs.twimg.com/profile_images/2024214245605593092/LINqtrz2_400x400.jpg",
+        alt: "Zayven Knox, CEO & Founder",
+        width: 400,
+        height: 400,
+      } satisfies ImageRef,
+    },
+    {
+      id: "growth",
+      name: "Morgan Ellis",
+      role: "Head of Growth",
+      bio: "Runs channel mix, creator briefs, and weekly reviews so every sprint has a clear publish and learn plan.",
+    },
+    {
+      id: "creative",
+      name: "Riley Chen",
+      role: "Creative Director",
+      bio: "Hooks, scripts, and formats tuned for each platform — clarity in the first second, proof right after.",
+    },
+  ],
+};
+
 export const about = {
   id: "about" as const,
   eyebrow: "About us",
@@ -301,10 +370,10 @@ export const founder = {
     handle: "@ZayvenKnox",
   },
   image: {
-    src: "/images/sajied-founder.png",
+    src: "https://pbs.twimg.com/profile_images/2024214245605593092/LINqtrz2_400x400.jpg",
     alt: "ForgeAIStudio, CEO & Founder",
-    width: 640,
-    height: 800,
+    width: 400,
+    height: 400,
   } satisfies ImageRef,
 };
 
@@ -356,9 +425,8 @@ export const booking = {
   title: "Book Your Strategy Call",
   subtitle:
     "Pick a time that works. We’ll map your flywheel and next 30 days of distribution.",
-  /** Inline embed — event: https://calendly.com/omorfaruk-dev/new-meeting */
-  calendlyEmbedUrl:
-    "https://calendly.com/omorfaruk-dev/new-meeting?embed_type=Inline",
+  /** Calendly inline widget `data-url` */
+  calendlyEmbedUrl: calendlyEventUrl,
 };
 
 export const footer = {

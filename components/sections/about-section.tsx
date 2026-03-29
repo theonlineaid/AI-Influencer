@@ -37,7 +37,7 @@ export function AboutSection() {
             ))}
           </ul>
         </FadeIn>
-        <FadeIn delay={0.08} className="flex flex-col items-center lg:items-end">
+        <FadeIn delay={0.08} className="flex flex-col items-center">
           <div className="relative w-full max-w-sm">
             <div className="overflow-hidden rounded-full border-4 border-violet-500/30 bg-violet-950/50 p-1 shadow-[0_0_50px_-10px_rgba(139,92,246,0.5)]">
               <Image
@@ -49,13 +49,13 @@ export function AboutSection() {
                 sizes="(max-width: 1024px) 280px, 320px"
               />
             </div>
-            <p className="mt-4 text-center text-lg font-bold text-white lg:text-right">
+            <p className="mt-4 text-center text-lg font-bold text-white">
               {founder.name}
             </p>
-            <p className="text-center text-sm text-zinc-400 lg:text-right">
+            <p className="text-center text-sm text-zinc-400">
               {founder.title}
             </p>
-            <p className="mt-2 text-center lg:text-right">
+            <p className="mt-2 text-center">
               <a
                 href={founder.x.href}
                 target="_blank"
