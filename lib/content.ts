@@ -43,7 +43,7 @@ export const hero = {
   /** Contained (solid) — under video */
   campaignCta: {
     label: "Start Your 30-Day Campaign",
-    href: "#book-call",
+    href: "mailto:promptforgelabs@gmail.com?subject=30-Day%20campaign%20inquiry",
   },
   /** Outline — under video */
   strategyCallCta: {
@@ -296,6 +296,10 @@ export const about = {
 export const founder = {
   name: "ForgeAIStudio",
   title: "CEO & Founder",
+  x: {
+    href: "https://x.com/ZayvenKnox",
+    handle: "@ZayvenKnox",
+  },
   image: {
     src: "/images/sajied-founder.png",
     alt: "ForgeAIStudio, CEO & Founder",

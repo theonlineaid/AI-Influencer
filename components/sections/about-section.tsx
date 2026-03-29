@@ -55,6 +55,16 @@ export function AboutSection() {
             <p className="text-center text-sm text-zinc-400 lg:text-right">
               {founder.title}
             </p>
+            <p className="mt-2 text-center lg:text-right">
+              <a
+                href={founder.x.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-cyan-400/90 underline-offset-4 transition-colors hover:text-cyan-300 hover:underline"
+              >
+                {founder.x.handle}
+              </a>
+            </p>
           </div>
         </FadeIn>
       </div>

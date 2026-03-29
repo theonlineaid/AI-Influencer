@@ -40,11 +40,21 @@ export function ButtonLink({
   className = "",
 }: ButtonLinkProps) {
   const styles = `${base} ${variants[variant]} ${className}`;
-  const external = href.startsWith("http");
+  const externalHttp = href.startsWith("http");
+  const nativeScheme =
+    href.startsWith("mailto:") || href.startsWith("tel:");
 
-  if (external) {
+  if (externalHttp) {
     return (
       <a href={href} className={styles} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  }
+
+  if (nativeScheme) {
+    return (
+      <a href={href} className={styles}>
         {children}
       </a>
     );
