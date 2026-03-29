@@ -9,7 +9,7 @@ type SectionHeadingProps = {
   eyebrow?: ReactNode;
   spacing?: "default" | "compact";
   theme?: Theme;
-  /** Override title color (e.g. text-[var(--brand)] on light sections). */
+  /** Override title color (e.g. accent on dark sections). */
   titleClassName?: string;
 };
 
@@ -26,17 +26,18 @@ export function SectionHeading({
   const marginClass =
     spacing === "compact" ? "mb-6 md:mb-8" : "mb-10 md:mb-14";
   const titleColor =
-    titleClassName ??
-    (theme === "dark" ? "text-white" : "text-zinc-900");
-  const subColor = theme === "dark" ? "text-blue-100/90" : "text-zinc-600";
-  const eyebrowColor =
-    theme === "dark" ? "text-blue-200/90" : "text-[var(--brand)]";
+    titleClassName ?? (theme === "dark" ? "text-white" : "text-zinc-900");
+  const subColor = theme === "dark" ? "text-zinc-400" : "text-zinc-600";
+  const eyebrowClass =
+    theme === "dark"
+      ? "text-cyan-400/90"
+      : "text-violet-600";
 
   return (
     <div className={`max-w-3xl ${marginClass} ${alignClass}`}>
       {eyebrow ? (
         <p
-          className={`mb-3 text-xs font-bold uppercase tracking-[0.18em] ${eyebrowColor}`}
+          className={`mb-3 text-xs font-bold uppercase tracking-[0.18em] ${eyebrowClass}`}
         >
           {eyebrow}
         </p>

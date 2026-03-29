@@ -18,13 +18,17 @@ type FaqAccordionProps = {
 export function FaqAccordion({ items, theme = "light" }: FaqAccordionProps) {
   const [openId, setOpenId] = useState<string | null>(items[0]?.id ?? null);
   const groupId = useId();
-  const border = theme === "dark" ? "border-white/15" : "border-zinc-200";
-  const bg = theme === "dark" ? "bg-white/5" : "bg-white";
-  const divide = theme === "dark" ? "divide-white/10" : "divide-zinc-200";
+  const isDark = theme === "dark";
+  const border = isDark ? "border-white/10" : "border-zinc-200";
+  const bg = isDark ? "bg-zinc-900/60" : "bg-white";
+  const divide = isDark ? "divide-white/10" : "divide-zinc-200";
+  const qColor = isDark ? "text-zinc-100" : "text-zinc-900";
+  const aColor = isDark ? "text-zinc-400" : "text-zinc-600";
+  const chevron = isDark ? "text-zinc-500" : "text-zinc-400";
 
   return (
     <div
-      className={`divide-y ${divide} overflow-hidden rounded-2xl border ${border} ${bg} shadow-sm`}
+      className={`divide-y ${divide} overflow-hidden rounded-2xl border ${border} ${bg} shadow-lg shadow-black/20`}
     >
       {items.map((item) => {
         const isOpen = openId === item.id;
@@ -39,11 +43,11 @@ export function FaqAccordion({ items, theme = "light" }: FaqAccordionProps) {
               aria-expanded={isOpen}
               aria-controls={panelId}
               onClick={() => setOpenId(isOpen ? null : item.id)}
-              className="flex w-full items-center justify-between gap-4 py-4 text-left text-sm font-semibold text-zinc-900 md:text-base"
+              className={`flex w-full items-center justify-between gap-4 py-4 text-left text-sm font-semibold md:text-base ${qColor}`}
             >
               <span>{item.question}</span>
               <ChevronDown
-                className={`h-5 w-5 shrink-0 text-zinc-400 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                className={`h-5 w-5 shrink-0 transition-transform ${chevron} ${isOpen ? "rotate-180" : ""}`}
                 aria-hidden
               />
             </button>
@@ -59,7 +63,9 @@ export function FaqAccordion({ items, theme = "light" }: FaqAccordionProps) {
                   transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                   className="overflow-hidden"
                 >
-                  <p className="pb-4 text-sm leading-relaxed text-zinc-600 md:text-[15px]">
+                  <p
+                    className={`pb-4 text-sm leading-relaxed md:text-[15px] ${aColor}`}
+                  >
                     {item.answer}
                   </p>
                 </motion.div>

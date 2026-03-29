@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --brand: #0052ff;
-  --brand-hover: #0046e0;
-  --muted-bg: #f4f4f5;
+  --background: #030712;
+  --foreground: #f4f4f5;
+  /* Primary AI accent — violet */
+  --brand: #8b5cf6;
+  --brand-hover: #7c3aed;
+  --accent-cyan: #22d3ee;
+  --accent-indigo: #6366f1;
+  --surface: #0a0a12;
+  --surface-elevated: #12121c;
+  --muted-bg: #18181f;
+  --border-subtle: rgba(255, 255, 255, 0.08);
 }
 
 @theme inline {
@@ -21,6 +27,31 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Hero / spotlight — soft aurora mesh */
+.ai-aurora {
+  position: relative;
+  background-color: var(--surface);
+  isolation: isolate;
+}
+
+.ai-aurora::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.35), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(34, 211, 238, 0.12), transparent),
+    radial-gradient(ellipse 50% 60% at 0% 50%, rgba(99, 102, 241, 0.18), transparent),
+    radial-gradient(ellipse 70% 50% at 80% 100%, rgba(139, 92, 246, 0.15), transparent);
+  pointer-events: none;
+}
+
+.ai-aurora > * {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes trusted-logo-marquee {

@@ -9,22 +9,22 @@ export function BookingSection() {
   return (
     <Section
       id={booking.id}
-      className="bg-zinc-50 py-16 md:py-24"
+      className="border-t border-white/[0.06] bg-[var(--surface)] py-16 md:py-24"
       containerClassName="max-w-4xl"
     >
       <FadeIn className="text-center">
-        <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand)] text-white shadow-lg">
+        <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-600 text-white shadow-lg shadow-violet-500/30">
           <CalendarDays className="h-7 w-7" aria-hidden />
         </span>
-        <h2 className="mt-6 text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
+        <h2 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-4xl">
           {booking.title}
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-zinc-600">{booking.subtitle}</p>
+        <p className="mx-auto mt-3 max-w-xl text-zinc-400">{booking.subtitle}</p>
       </FadeIn>
 
       <FadeIn delay={0.08} className="mt-10">
         {hasCalendly ? (
-          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/80 shadow-xl">
             <iframe
               title="Schedule a call"
               src={booking.calendlyEmbedUrl}
@@ -32,20 +32,20 @@ export function BookingSection() {
             />
           </div>
         ) : (
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm md:p-10">
+          <div className="rounded-2xl border border-white/10 bg-zinc-900/60 p-6 shadow-lg md:p-10">
             <p className="text-center text-sm font-medium text-zinc-500">
               Calendly embed placeholder — set{" "}
-              <code className="rounded bg-zinc-100 px-1.5 py-0.5 text-xs text-zinc-800">
+              <code className="rounded bg-zinc-950 px-1.5 py-0.5 text-xs text-cyan-400/90">
                 booking.calendlyEmbedUrl
               </code>{" "}
               in{" "}
-              <code className="rounded bg-zinc-100 px-1.5 py-0.5 text-xs text-zinc-800">
+              <code className="rounded bg-zinc-950 px-1.5 py-0.5 text-xs text-cyan-400/90">
                 lib/content.ts
               </code>
             </p>
-            <div className="mt-8 grid grid-cols-7 gap-2 text-center text-xs text-zinc-400">
+            <div className="mt-8 grid grid-cols-7 gap-2 text-center text-xs text-zinc-500">
               {["S", "M", "T", "W", "T", "F", "S"].map((d, idx) => (
-                <div key={`${d}-${idx}`} className="font-semibold">
+                <div key={`${d}-${idx}`} className="font-semibold text-zinc-400">
                   {d}
                 </div>
               ))}
@@ -55,14 +55,14 @@ export function BookingSection() {
                 return (
                   <div
                     key={i}
-                    className={`flex h-9 items-center justify-center rounded-lg text-zinc-500 ${isPick ? "bg-[var(--brand)] font-semibold text-white" : "bg-zinc-50"}`}
+                    className={`flex h-9 items-center justify-center rounded-lg ${isPick ? "bg-gradient-to-br from-violet-600 to-indigo-600 font-semibold text-white" : "bg-zinc-950/80 text-zinc-500"}`}
                   >
                     {day <= 31 ? day : ""}
                   </div>
                 );
               })}
             </div>
-            <p className="mt-6 text-center text-xs text-zinc-400">
+            <p className="mt-6 text-center text-xs text-zinc-600">
               Replace this block with your real Calendly inline widget when ready.
             </p>
           </div>

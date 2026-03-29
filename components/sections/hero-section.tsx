@@ -6,7 +6,7 @@ import { LogoMarquee } from "@/components/ui/logo-marquee";
 
 export function HeroSection() {
   return (
-    <section className="bg-[var(--brand)] pb-16 pt-10 md:pb-24 md:pt-14">
+    <section className="ai-aurora pb-16 pt-10 md:pb-24 md:pt-14">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <FadeIn>
           <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.12]">
@@ -16,19 +16,19 @@ export function HeroSection() {
               </span>
             ))}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg font-medium text-white md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg font-medium text-zinc-200 md:text-xl">
             {hero.subheadline}
           </p>
-          <p className="mx-auto mt-5 max-w-2xl text-pretty text-base font-semibold leading-relaxed text-blue-100 md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-pretty text-base font-semibold leading-relaxed text-cyan-200/80 md:text-lg">
             {hero.punchy}
           </p>
-          <p className="mx-auto mt-6 max-w-2xl rounded-2xl border border-white/25 bg-white/10 px-5 py-4 text-pretty text-base font-semibold leading-relaxed text-white md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl rounded-2xl border border-violet-500/30 bg-violet-950/40 px-5 py-4 text-pretty text-base font-semibold leading-relaxed text-zinc-100 shadow-[0_0_40px_-10px_rgba(139,92,246,0.4)] backdrop-blur-sm md:text-lg">
             {hero.guarantee}
           </p>
         </FadeIn>
 
         <FadeIn delay={0.06} className="mt-10">
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border-4 border-white/25 bg-black shadow-2xl">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-cyan-500/20 bg-black/40 shadow-[0_0_60px_-15px_rgba(34,211,238,0.25)] ring-1 ring-violet-500/20">
             <div className="relative aspect-video w-full">
               <iframe
                 src={hero.youtubeEmbed.src}
@@ -43,7 +43,7 @@ export function HeroSection() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="mt-8 flex w-full max-w-xl mx-auto flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
+          <div className="mx-auto mt-8 flex w-full max-w-xl flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
             <ButtonLink
               href={hero.campaignCta.href}
               variant="whiteSolid"
@@ -59,14 +59,14 @@ export function HeroSection() {
               {hero.strategyCallCta.label}
             </ButtonLink>
           </div>
-          <p className="mx-auto mt-4 max-w-xl text-pretty text-sm font-medium leading-relaxed text-blue-100/95 md:text-base">
+          <p className="mx-auto mt-4 max-w-xl text-pretty text-sm font-medium leading-relaxed text-zinc-400 md:text-base">
             {hero.guaranteeFootnote}
           </p>
-          {/* <HeroEmailForm /> */}
+          <HeroEmailForm />
         </FadeIn>
 
-        <FadeIn delay={0.14} className="mt-14 border-t border-white/15 pt-10">
-          <p className="text-xs font-semibold uppercase tracking-wider text-blue-200/90">
+        <FadeIn delay={0.14} className="mt-14 border-t border-white/10 pt-10">
+          <p className="text-xs font-semibold uppercase tracking-wider text-cyan-400/80">
             {trustedBy.title}
           </p>
           <div className="mt-8">

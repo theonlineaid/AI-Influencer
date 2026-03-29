@@ -8,27 +8,30 @@ import { HoverLift } from "@/components/ui/hover-lift";
 
 export function CaseStudiesSection() {
   return (
-    <Section id={caseStudies.id} className="bg-white py-16 md:py-24">
+    <Section
+      id={caseStudies.id}
+      className="border-t border-white/[0.06] bg-[var(--surface)] py-16 md:py-24"
+    >
       <SectionHeading
         eyebrow="Results"
         title={caseStudies.title}
         subtitle={caseStudies.subtitle}
-        theme="light"
+        theme="dark"
       />
       <div className="grid gap-8 lg:grid-cols-3">
         {caseStudies.cases.map((c, i) => (
           <FadeIn key={c.id} delay={i * 0.08}>
             <HoverLift className="h-full">
-              <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-                <div className="border-b border-zinc-100 bg-zinc-50 px-5 py-4">
-                  <p className="text-xs font-bold uppercase tracking-wider text-[var(--brand)]">
+              <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-zinc-900/50 shadow-[0_0_50px_-20px_rgba(99,102,241,0.25)] backdrop-blur-sm">
+                <div className="border-b border-white/[0.06] bg-zinc-950/80 px-5 py-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-cyan-400/90">
                     {c.platform}
                   </p>
-                  <h3 className="mt-1 text-lg font-bold text-zinc-900">
+                  <h3 className="mt-1 text-lg font-bold text-white">
                     {c.title}
                   </h3>
                 </div>
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-950">
                   <Image
                     src={c.image.src}
                     alt={c.image.alt}
@@ -41,29 +44,29 @@ export function CaseStudiesSection() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <p className="text-sm text-zinc-600">{c.body}</p>
-                  <dl className="mt-6 grid grid-cols-3 gap-2 border-t border-zinc-100 pt-4 text-center">
+                  <p className="text-sm text-zinc-400">{c.body}</p>
+                  <dl className="mt-6 grid grid-cols-3 gap-2 border-t border-white/[0.06] pt-4 text-center">
                     <div>
-                      <dt className="text-[10px] font-semibold uppercase tracking-wide text-zinc-400">
+                      <dt className="text-[10px] font-semibold uppercase tracking-wide text-zinc-500">
                         Views
                       </dt>
-                      <dd className="mt-1 text-lg font-bold text-zinc-900">
+                      <dd className="mt-1 text-lg font-bold text-white">
                         {c.metrics.views}
                       </dd>
                     </div>
                     <div>
-                      <dt className="text-[10px] font-semibold uppercase tracking-wide text-zinc-400">
+                      <dt className="text-[10px] font-semibold uppercase tracking-wide text-zinc-500">
                         Signups
                       </dt>
-                      <dd className="mt-1 text-lg font-bold text-zinc-900">
+                      <dd className="mt-1 text-lg font-bold text-white">
                         {c.metrics.signups}
                       </dd>
                     </div>
                     <div>
-                      <dt className="text-[10px] font-semibold uppercase tracking-wide text-zinc-400">
+                      <dt className="text-[10px] font-semibold uppercase tracking-wide text-zinc-500">
                         ROI
                       </dt>
-                      <dd className="mt-1 text-lg font-bold text-zinc-900">
+                      <dd className="mt-1 text-lg font-bold text-white">
                         {c.metrics.roi}
                       </dd>
                     </div>

@@ -9,26 +9,26 @@ export function GrowthSystemSection() {
   return (
     <Section
       id={growthSystem.id}
-      className="bg-zinc-100 py-16 md:py-24"
+      className="border-t border-white/[0.06] bg-zinc-950 py-16 md:py-24"
       containerClassName="max-w-7xl"
     >
       <SectionHeading
         title={growthSystem.title}
         subtitle={growthSystem.subtitle}
-        theme="light"
+        theme="dark"
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {growthSystem.pillars.map((p, i) => (
           <FadeIn key={p.letter} delay={i * 0.06}>
             <HoverLift className="h-full">
-              <div className="flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-                <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-[var(--brand)] text-xl font-bold text-white">
+              <div className="flex h-full flex-col rounded-2xl border border-white/[0.08] bg-zinc-900/40 p-6 backdrop-blur-sm">
+                <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-600/40 text-xl font-bold text-cyan-300 ring-1 ring-cyan-500/30">
                   {p.letter}
                 </span>
-                <h3 className="mt-4 text-lg font-bold text-zinc-900">
+                <h3 className="mt-4 text-lg font-bold text-white">
                   {p.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
                   {p.body}
                 </p>
               </div>

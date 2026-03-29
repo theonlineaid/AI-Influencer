@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sajied AI — AI workspace for founders",
-    template: "%s · Sajied AI",
+    default: "ForgeAIStudio — AI workspace for founders",
+    template: "%s · ForgeAIStudio",
   },
   description:
-    "Get your AI product in front of millions — the Sajied AI influencer flywheel for founders.",
+    "Get your AI product in front of millions — the ForgeAIStudio influencer flywheel for founders.",
   openGraph: {
-    title: "Sajied AI",
+    title: "ForgeAIStudio",
     description:
       "Get your AI tool millions of views and thousands of signups — with a done-for-you growth flywheel.",
   },
@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-white font-sans text-zinc-900">
+      <body className="flex min-h-full flex-col bg-[var(--background)] font-sans text-zinc-100 antialiased">
         {children}
       </body>
     </html>

@@ -17,19 +17,20 @@ type ButtonLinkProps = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand)]";
+  "inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400/80";
 
 const variants: Record<Variant, string> = {
   blueSolid:
-    "bg-[var(--brand)] text-white shadow-sm hover:bg-[var(--brand-hover)]",
-  whiteSolid: "bg-white text-[var(--brand)] shadow-sm hover:bg-zinc-100",
+    "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-violet-500/25 hover:from-violet-500 hover:to-indigo-500",
+  whiteSolid:
+    "bg-white text-violet-950 shadow-lg shadow-black/20 hover:bg-zinc-100",
   whiteOutline:
-    "border-2 border-white text-white hover:bg-white/10",
+    "border-2 border-white/40 text-white hover:border-cyan-400/50 hover:bg-white/5",
   blueOutline:
-    "border-2 border-[var(--brand)] text-[var(--brand)] hover:bg-blue-50",
-  whiteGhost: "text-white underline-offset-4 hover:underline",
+    "border-2 border-violet-500/60 text-cyan-300 hover:border-cyan-400/70 hover:bg-violet-500/10",
+  whiteGhost: "text-white underline-offset-4 hover:text-cyan-200 hover:underline",
   blueGhost:
-    "text-[var(--brand)] underline-offset-4 hover:underline",
+    "text-violet-300 underline-offset-4 hover:text-cyan-300 hover:underline",
 };
 
 export function ButtonLink({

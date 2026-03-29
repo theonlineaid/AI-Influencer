@@ -1,5 +1,5 @@
 /**
- * Central content for the Sajied AI landing page (Founders-AI-style layout).
+ * Central content for the ForgeAIStudio landing page (Founders-AI-style layout).
  * Edit here to rebrand or swap copy, images, and CTAs.
  */
 
@@ -11,16 +11,16 @@ export type ImageRef = {
 };
 
 export const site = {
-  name: "Sajied AI",
+  name: "ForgeAIStudio",
   description:
-    "Get your AI product in front of millions — using the Sajied AI growth flywheel.",
-  url: "https://sajied.ai",
-  /** Header / footer — founder portrait used as brand mark */
+    "Get your AI product in front of millions — using the ForgeAIStudio growth flywheel.",
+  url: "https://forgeaistudio.com",
+  /** Header / footer — brand lockup (replace file to update artwork) */
   logo: {
-    src: "/images/sajied-founder.png",
-    alt: "Sajied AI",
-    width: 640,
-    height: 800,
+    src: "/images/sajied-ai-logo.jpg",
+    alt: "ForgeAIStudio",
+    width: 400,
+    height: 400,
   } satisfies ImageRef,
 };
 
@@ -283,7 +283,7 @@ export const about = {
   eyebrow: "About us",
   title: "We help AI founders turn attention into signups.",
   body: [
-    "Sajied AI exists because building in public isn’t optional anymore — but doing it well is still rare. We combine creative direction, influencer workflows, and ruthless prioritization so your roadmap and your distribution move together.",
+    "ForgeAIStudio exists because building in public isn’t optional anymore — but doing it well is still rare. We combine creative direction, influencer workflows, and ruthless prioritization so your roadmap and your distribution move together.",
     "You stay focused on product. We make sure the market actually sees it.",
   ],
   bullets: [
@@ -294,11 +294,11 @@ export const about = {
 };
 
 export const founder = {
-  name: "Sajied",
+  name: "ForgeAIStudio",
   title: "CEO & Founder",
   image: {
     src: "/images/sajied-founder.png",
-    alt: "Sajied, CEO & Founder of Sajied AI",
+    alt: "ForgeAIStudio, CEO & Founder",
     width: 640,
     height: 800,
   } satisfies ImageRef,
@@ -310,7 +310,7 @@ export const faq = {
   items: [
     {
       id: "q1",
-      question: "Who is Sajied AI for?",
+      question: "Who is ForgeAIStudio for?",
       answer:
         "Founders and small teams shipping AI products who need distribution that compounds — not one-off viral posts that vanish.",
     },
@@ -358,7 +358,7 @@ export const booking = {
 };
 
 export const footer = {
-  copyright: `© ${new Date().getFullYear()} Sajied AI. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} ForgeAIStudio. All rights reserved.`,
   socials: [
     { label: "LinkedIn", href: "https://linkedin.com" },
     { label: "YouTube", href: "https://youtube.com" },

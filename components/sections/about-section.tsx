@@ -6,25 +6,31 @@ import { Section } from "@/components/ui/section";
 
 export function AboutSection() {
   return (
-    <Section id={about.id} className="bg-[var(--brand)] py-16 md:py-24">
+    <Section
+      id={about.id}
+      className="ai-aurora relative border-t border-violet-500/20 py-16 md:py-24"
+    >
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <FadeIn>
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-200">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-400/90">
             {about.eyebrow}
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
             {about.title}
           </h2>
-          <div className="mt-6 space-y-4 text-base leading-relaxed text-blue-100">
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-400">
             {about.body.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
           <ul className="mt-8 space-y-3">
             {about.bullets.map((b) => (
-              <li key={b} className="flex gap-3 text-sm text-white md:text-base">
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/15">
-                  <Check className="h-3.5 w-3.5 text-white" strokeWidth={3} />
+              <li key={b} className="flex gap-3 text-sm text-zinc-200 md:text-base">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-500/20 ring-1 ring-violet-500/40">
+                  <Check
+                    className="h-3.5 w-3.5 text-cyan-400"
+                    strokeWidth={3}
+                  />
                 </span>
                 {b}
               </li>
@@ -33,7 +39,7 @@ export function AboutSection() {
         </FadeIn>
         <FadeIn delay={0.08} className="flex flex-col items-center lg:items-end">
           <div className="relative w-full max-w-sm">
-            <div className="overflow-hidden rounded-full border-4 border-white/30 bg-white/10 p-1 shadow-xl">
+            <div className="overflow-hidden rounded-full border-4 border-violet-500/30 bg-violet-950/50 p-1 shadow-[0_0_50px_-10px_rgba(139,92,246,0.5)]">
               <Image
                 src={founder.image.src}
                 alt={founder.image.alt}
@@ -46,7 +52,7 @@ export function AboutSection() {
             <p className="mt-4 text-center text-lg font-bold text-white lg:text-right">
               {founder.name}
             </p>
-            <p className="text-center text-sm text-blue-200 lg:text-right">
+            <p className="text-center text-sm text-zinc-400 lg:text-right">
               {founder.title}
             </p>
           </div>

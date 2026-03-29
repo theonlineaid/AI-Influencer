@@ -12,7 +12,7 @@ import { SiteFooter } from "@/components/sections/site-footer";
 
 export default function Home() {
   return (
-    <div className="min-h-full bg-white text-zinc-900">
+    <div className="min-h-full bg-[var(--background)] text-zinc-100">
       <SiteHeader />
       <main>
         <HeroSection />
