@@ -25,7 +25,7 @@ export const site = {
 };
 
 /** Calendly scheduling page — header CTA opens here; inline widget uses the same event. */
-export const calendlyEventUrl = "https://calendly.com/omorfaruk-dev/new-meeting";
+export const calendlyEventUrl = "https://calendly.com/promptforgelabs/30min";
 
 export const nav = {
   cta: { label: "Book a Free Strategy Call", href: calendlyEventUrl },
